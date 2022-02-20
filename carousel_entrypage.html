@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+    <HTML>
+        <HEAD>
+            <meta charset="UTF-8">
+            <title>Vorlesungsplaner Carousel</title>
+            <link rel="stylesheet" type="text/css" href="./style/carousel.css">
+            
+        </HEAD>
+        <BODY>
+            <div class="carousel">
+                <button class="carousel_button" id="left" style="display: none" onclick="prevButtonEvent()">
+                    <img src="images/nav_left.svg" alt="Icon not found">
+                </button>
+                <div class="carousel_track_container">
+                    <ul class="carousel_track">
+                        <li class="carousel_slide" id="current-slide">
+                            <article id="0">
+                                <h2>Willkommen zu unserem Vorlesungsplaner</h2>
+                                <p>Dieses Projekt wurde im Rahmen des Web-Engineering Kurses der DHBW-Lörrach erstellt</p>
+                            </article>
+                        </li>
+                        <li class="carousel_slide">
+                            <article id="0" style="display: none;">
+                                <h2>Über uns</h2>
+                                <p>Dieses Projekt wurde von Niklas Reinke, Marvin Obert und Ugurtan Can Cetin erstellt.<br> Kennengelernt haben wir uns im ersten Semester des Studienganges Informatik der DHBW Lörrach.</p>
+                            </article>
+                        </li>
+                        <li class="carousel_slide">
+                            <article id="0">
+                                <h2>Funktionen des Vorlesungsplaners</h2>
+                                <p>Der Vorlesungsplaner hat die Grund CRUD-Operationen und diese kann man für Studiengänge, Vorlesungen, Semester, Dozenten und Vorlesungstermine durchführen. <br/> 
+                                    Außerdem kann man die jahrgänge, Dozenten, etc. auch noch im Nachhinein hinzufügen. <br> Es ist auch eine Dashboard-Page verfügbar, der die wichtigsten Termine auf einem Punkt zeigt.
+                                </p>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+                <button class="carousel_button" id="right" onclick="nextButtonEvent()">
+                    <img src="images/nav_left.svg" alt="Icon not found" style='transform: rotate(180deg)'>
+                </button>
+
+                <div class="carousel_navigation">
+                    <button class="carousel_indicator" id="current-slide"></button>
+                    <button class="carousel_indicator"></button>
+                    <button class="carousel_indicator"></button>
+                </div>
+            </div>
+            <script type="text/javascript" src="./design_code/carousel_code.js"></script>
+        </BODY>
+    </HTML>
