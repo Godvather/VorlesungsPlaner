@@ -4,6 +4,31 @@
   justify-content: end;
 }
 
+footer {
+  margin-top: 10px;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 5px;
+  min-height: 45px;
+  max-height: 45px;
+  width: 100%;
+}
+
+footer a{
+  float: left;
+  padding:14px 16px;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  height:100%;
+}
+
+footer > a:hover {
+  background-color: #f2f2f2;
+  color: black;
+}
+
 .slideBackground {
   background-size: cover;
 }
@@ -34,10 +59,12 @@ body {
   font-size: 17px;
   height:100%;
 }
+
 .topnav a:hover {
 background-color: #f2f2f2;
 color: black;
 }
+
 .topnav a.active {
 background-color: #04AA6D;
 color: #f2f2f2;
@@ -46,7 +73,7 @@ color: #f2f2f2;
 .wrapper {
   min-width: 500px;
   width: 100%;
-  min-height: 500px;
+  min-height: 800px;
   height: 100%;
   margin-top: 1em;
   display: flex;
@@ -57,9 +84,9 @@ color: #f2f2f2;
 article {
   width:60%;
   background-color: #333;
-  min-height: 400px;
-  max-height: 800px;
-  height: 800px;
+  min-height: 790px;
+  max-height: 790px;
+  height: 790px;
   height: 80%;
   text-align: center;
   border-radius: 5px;
@@ -80,12 +107,11 @@ aside {
   width: 40%;
   background-color: #333;
   border-radius: 5px;
-  min-height: 400px;
-  max-height: 800px;
+  min-height: 790px;
+  max-height: 790px;
   padding: 0;
   text-align: center;
   position: relative;
-  filter: blur('5px');
 }
 .asideInner {
   margin-left: 1em;
@@ -96,17 +122,19 @@ aside {
   max-height: 800px;
   padding: 0;
   text-align: center;
-  position: relative;
+  position: absolute;
 }
 
-aside img {
-  max-width: 88%;
-  max-height: 70%;
-  display: block;
-  margin: 1em;
-  opacity:0.7;
-  position: relative;
-  border-radius: 2px;
+.imgText {
+  background-color: #333;
+  border-radius: 5px;
+  translate: 75%;
+  width:100%;
+}
+
+.imgText .slideLabel{
+  background:rgba(51, 51, 51, 0.884);
+  border-radius: 8px;
   
 }
 
@@ -123,12 +151,14 @@ aside label{
   top: 300px;
   width:100%;
 }
+
 button {
   cursor: pointer;
 }
 
 button.start {
   padding: 1em;
+  margin-top:2em;
   margin-bottom: 1em;
   color:#f2f2f2;
   font-size: x-large;
@@ -157,12 +187,40 @@ button.start:hover {
   top: 0;
 }
 
+div.slideButtons {
+  background: rgba(39, 39, 39, 0.884);
+  border-radius: 5px;
+  width: 200px;
+  position: relative;
+  top: 380px;
+  left: 270px;
+}
+
+div.slideButtons button:first-child {
+  margin-right: 5px;
+}
+
+div.slideButtons button:nth-child(2){
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+div.slideButtons button:nth-child(3){
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+div.slideButtons button:nth-child(4){
+  margin-left: 5px;
+}
+
 div.slideButtons button {
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 50%;
   height:25px;
   width:25px;
   border: 0px;
-  margin: 10px;
 }
 
 div.slideButtons button.inactive{
