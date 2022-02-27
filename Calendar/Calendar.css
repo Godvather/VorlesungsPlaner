@@ -1,0 +1,42 @@
+.day{
+    color: white;
+    padding: 10px;
+    
+    
+}
+.days{
+    display: flex;
+    padding: 5px;
+    background-color: forestgreen;
+    justify-content: space-evenly;
+}
+.box{
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid green;
+    
+}
+.number{
+    display: flex; 
+    justify-content: space-evenly;
+}
+.week-one{
+    color:red;
+    width: 1196px;
+}
+.week-two{
+    color:green;
+}
+.week-three{
+    
+}
+.week-four{
+    
+}
+.week-five{
+    
+}
+.week-six{
+    
+}
