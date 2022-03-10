@@ -1,17 +1,10 @@
 package de.digitra.uniplaner.controller;
 
-import de.digitra.uniplaner.domain.Lecturer;
-import de.digitra.uniplaner.domain.Semester;
-import de.digitra.uniplaner.domain.StudyClass;
 import de.digitra.uniplaner.domain.StudyProgram;
 import de.digitra.uniplaner.exceptions.BadRequestException;
-import de.digitra.uniplaner.exceptions.DuplicateEmailException;
 import de.digitra.uniplaner.exceptions.ResourceNotFoundException;
 import de.digitra.uniplaner.interfaces.IStudyProgramController;
-import de.digitra.uniplaner.service.SemesterService;
 import de.digitra.uniplaner.service.StudyProgramService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,10 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.HttpServerErrorException;
 
 import javax.validation.Valid;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
@@ -37,6 +28,7 @@ public class StudyProgramController implements IStudyProgramController{
     @GetMapping
     public String findAll(Model model) {
         model.addAttribute("studyProgram", studyProgramService.findAll());
+        System.out.println("Worked");
         return "studyprogram-list";
     }
 
@@ -144,9 +136,7 @@ public class StudyProgramController implements IStudyProgramController{
     @RequestMapping(value="/get", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<List<StudyProgram>> getAllstudyprograms() {
-       List<StudyProgram> ls = null;
-        ls = studyProgramService.findAll();
-        return ResponseEntity.ok(ls);
+        return ResponseEntity.ok(studyProgramService.findAll());
     }
 
     @RequestMapping(value="/getStudyProgram", method = RequestMethod.POST)

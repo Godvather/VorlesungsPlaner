@@ -32,6 +32,7 @@ public class LectureService implements ILectureService {
     @Override
     public Lecture save(Lecture lecture) {
         logger.debug("Request to save Lecture {}", lecture);
+        System.out.println("Request to save Lecture"+ lecture);
         return lectureRepository.save(lecture);
     }
 

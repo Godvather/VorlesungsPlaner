@@ -1,11 +1,12 @@
 package de.digitra.uniplaner.controller;
 
 import de.digitra.uniplaner.domain.Lecture;
-import de.digitra.uniplaner.domain.Semester;
+import de.digitra.uniplaner.domain.StudyProgram;
 import de.digitra.uniplaner.exceptions.BadRequestException;
 import de.digitra.uniplaner.exceptions.ResourceNotFoundException;
 import de.digitra.uniplaner.interfaces.ILectureController;
 import de.digitra.uniplaner.service.LectureService;
+import de.digitra.uniplaner.service.StudyProgramService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,10 +26,12 @@ public class LectureController implements ILectureController{
 
     @Autowired
     private LectureService lectureService;
+    private StudyProgramService studyProgramService;
 
     @GetMapping
     public String findAll(Model model) {
         model.addAttribute("lectures", lectureService.findAll());
+        System.out.println("3");
         return "lecture-list";
     }
 
@@ -41,11 +44,13 @@ public class LectureController implements ILectureController{
     @PostMapping
     public String createLecture(@Valid Lecture lecture, Errors errors) {
         if(errors.hasErrors()){
+            System.out.println("1");
             return "create-lecture";
+
         }
         else{
-            Lecture createLecture = lectureService.create(lecture);
-            return "redirect:/lectures";
+            lectureService.save(lecture);
+            return "lecture-list";
         }
     }
 

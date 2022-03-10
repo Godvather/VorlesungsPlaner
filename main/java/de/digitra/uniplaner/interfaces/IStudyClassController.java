@@ -59,7 +59,7 @@ public interface IStudyClassController {
      * @return Eine {@link ResponseEntity} mit Status Code {@code 200 (OK)} and im Body eine Liste von Ressourcen vom Typ StudyClass.
      */
     @GetMapping
-    List<StudyClass> getAllstudyclasss();
+    ResponseEntity<List<StudyClass>> getAllstudyclasss();
 
     /**
      * {@code GET  /studyclasss/:id} : Liefert die Ressource vom Typ StudyClass mit der angegebenen Id zurück.

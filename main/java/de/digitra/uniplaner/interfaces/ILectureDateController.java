@@ -59,7 +59,7 @@ public interface ILectureDateController {
      * @return Eine {@link ResponseEntity} mit Status Code {@code 200 (OK)} and im Body eine Liste von Ressourcen vom Typ LectureDate.
      */
     @GetMapping
-    List<LectureDate> getAlllecturedates();
+    ResponseEntity<List<LectureDate>> getAlllecturedates();
 
     /**
      * {@code GET  /lecturedates/:id} : Liefert die Ressource vom Typ LectureDate mit der angegebenen Id zurück.

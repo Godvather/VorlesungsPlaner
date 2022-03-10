@@ -59,7 +59,7 @@ public interface ISemesterController {
      * @return Eine {@link ResponseEntity} mit Status Code {@code 200 (OK)} and im Body eine Liste von Ressourcen vom Typ Semester.
      */
     @GetMapping
-    List<Semester> getAllsemesters();
+    ResponseEntity<List<Semester>> getAllsemesters();
 
     /**
      * {@code GET  /semesters/:id} : Liefert die Ressource vom Typ Semester mit der angegebenen Id zurück.

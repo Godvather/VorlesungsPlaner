@@ -59,7 +59,7 @@ public interface ILectureController {
      * @return Eine {@link ResponseEntity} mit Status Code {@code 200 (OK)} and im Body eine Liste von Ressourcen vom Typ Lecture.
      */
     @GetMapping
-    List<Lecture> getAlllectures();
+    ResponseEntity<List<Lecture>> getAlllectures();
 
     /**
      * {@code GET  /lectures/:id} : Liefert die Ressource vom Typ Lecture mit der angegebenen Id zurück.

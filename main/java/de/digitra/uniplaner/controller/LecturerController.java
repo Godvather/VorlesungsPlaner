@@ -1,17 +1,11 @@
 package de.digitra.uniplaner.controller;
 
-import de.digitra.uniplaner.domain.Lecture;
-import de.digitra.uniplaner.domain.LectureDate;
 import de.digitra.uniplaner.domain.Lecturer;
 import de.digitra.uniplaner.exceptions.BadRequestException;
 import de.digitra.uniplaner.exceptions.DuplicateEmailException;
 import de.digitra.uniplaner.exceptions.ResourceNotFoundException;
 import de.digitra.uniplaner.interfaces.ILecturerController;
-import de.digitra.uniplaner.service.LectureDateService;
 import de.digitra.uniplaner.service.LecturerService;
-import org.apache.coyote.Response;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpServerErrorException;
 
 import javax.validation.Valid;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
